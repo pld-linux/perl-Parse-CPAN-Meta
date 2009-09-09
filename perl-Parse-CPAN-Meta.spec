@@ -6,15 +6,14 @@
 %define	pdir	Parse
 %define	pnam	CPAN-Meta
 Summary:	Parse::CPAN::Meta - Parse META.yml and other similar CPAN metadata files
-#Summary(pl.UTF-8):
+Summary(pl.UTF-8):	Parse::CPAN::Meta - Parsuje META.yml i inne podobne pliki z metadanymi CPAN
 Name:		perl-Parse-CPAN-Meta
-Version:	1.39
+Version:	1.40
 Release:	1
-# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Parse/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b5c927089b30ced441ad4677a8bc4d0d
+# Source0-md5:	13038b57d3f253f8851323ba9db0b1a1
 URL:		http://search.cpan.org/dist/Parse-CPAN-Meta/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -40,7 +39,9 @@ identical calling semantics are used.
 
 All error reporting is done with exceptions (die'ing).
 
-# %description -l pl.UTF-8
+%description -l pl.UTF-8
+Parse::CPAN::Meta jest parserem plików META.yml opartym na części
+parsującej YAML::Tiny.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -63,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes
+%dir %{perl_vendorlib}/Parse/CPAN
 %{perl_vendorlib}/Parse/CPAN/*.pm
 %{_mandir}/man3/*
