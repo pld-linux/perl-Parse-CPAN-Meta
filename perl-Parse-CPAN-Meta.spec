@@ -8,16 +8,17 @@
 Summary:	Parse::CPAN::Meta - Parse META.yml and other similar CPAN metadata files
 Summary(pl.UTF-8):	Parse::CPAN::Meta - Parsuje META.yml i inne podobne pliki z metadanymi CPAN
 Name:		perl-Parse-CPAN-Meta
-Version:	1.40
+Version:	1.4401
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Parse/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	13038b57d3f253f8851323ba9db0b1a1
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	32c8b2ba97887b526a0948706c546eba
 URL:		http://search.cpan.org/dist/Parse-CPAN-Meta/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-JSON-PP >= 2.27103
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -66,5 +67,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %dir %{perl_vendorlib}/Parse/CPAN
-%{perl_vendorlib}/Parse/CPAN/*.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Parse::CPAN::Meta.3pm*
+%{perl_vendorlib}/Parse/CPAN/Meta.pm
