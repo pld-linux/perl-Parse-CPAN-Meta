@@ -9,7 +9,7 @@ Summary:	Parse::CPAN::Meta - Parse META.yml and other similar CPAN metadata file
 Summary(pl.UTF-8):	Parse::CPAN::Meta - Parsuje META.yml i inne podobne pliki z metadanymi CPAN
 Name:		perl-Parse-CPAN-Meta
 Version:	1.4401
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/%{pdir}-%{pnam}-%{version}.tar.gz
