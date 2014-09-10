@@ -15,8 +15,8 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Parse/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f83ad609767ab52e9a452243f50c71ca
 URL:		http://search.cpan.org/dist/Parse-CPAN-Meta/
-BuildRequires:	perl-ExtUtils-MakeMaker
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.80
@@ -24,6 +24,8 @@ BuildRequires:	perl-CPAN-Meta-YAML >= 0.011
 BuildRequires:	perl-JSON-PP >= 2.27200
 BuildRequires:	perl-Test-Simple >= 0.47
 %endif
+Requires:	perl-CPAN-Meta-YAML >= 0.011
+Requires:	perl-JSON-PP >= 2.27200
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
