@@ -8,12 +8,12 @@
 Summary:	Parse::CPAN::Meta - parse META.yml and other similar CPAN metadata files
 Summary(pl.UTF-8):	Parse::CPAN::Meta - analiza META.yml i innych podobnych plików z metadanymi CPAN
 Name:		perl-Parse-CPAN-Meta
-Version:	1.4414
+Version:	1.4422
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Parse/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f83ad609767ab52e9a452243f50c71ca
+# Source0-md5:	71d52f680b19b3ef36e9a0152e8a3e93
 URL:		http://search.cpan.org/dist/Parse-CPAN-Meta/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.30
 BuildRequires:	perl-devel >= 1:5.8.1
@@ -21,11 +21,11 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.80
 BuildRequires:	perl-CPAN-Meta-YAML >= 0.011
-BuildRequires:	perl-JSON-PP >= 2.27200
+BuildRequires:	perl-JSON-PP >= 2.27300
 BuildRequires:	perl-Test-Simple >= 0.47
 %endif
 Requires:	perl-CPAN-Meta-YAML >= 0.011
-Requires:	perl-JSON-PP >= 2.27200
+Requires:	perl-JSON-PP >= 2.27300
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
